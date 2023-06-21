@@ -1,0 +1,18 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-size: 24px;
+  font-family: "Rubik", sans-serif;
+}
+
+.chart:hover .active:nth-child(2n + 1) {
+  background-color: mediumseagreen;
+}
+
+.chart:hover .active:nth-child(4n) {
+  background-color: forestgreen;
+}
+a {
+  text-decoration: "none";
+  color: inherit;
+}
