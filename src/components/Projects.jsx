@@ -4,16 +4,23 @@ import phone from "../assets/img/phone.png";
 import laptop from "../assets/img/laptop.png";
 import SportsSoccerIcon from "@mui/icons-material/SportsSoccer";
 import { mobile } from "../responsive";
+import libraryImg from "../assets/img/screencapture-library-server-9l87-onrender-books-2023-06-22-13_49_21.png";
+
+import laptopImg from "../assets/img/MergedImages.png";
+
 const Container = styled.div`
-  max-height: 250vh;
+  max-height: "400vh";
   background-color: #111;
   display: flex;
   flex-direction: column;
   gap: 100px;
   padding: 0 10px;
+
   overflow: hidden;
   ${mobile({
     maxHeight: "max-content",
+
+    backgroundColor: "black",
   })}
 `;
 const SectionTitle = styled.h1`
@@ -35,7 +42,7 @@ const Title = styled.h1`
 `;
 const Project = styled.div`
   display: flex;
-  height: 150vh;
+  max-height: "max-content";
   gap: 100px;
   align-items: center;
   margin-top: 20px;
@@ -46,6 +53,7 @@ const Project = styled.div`
 
   ${mobile({
     display: "flex",
+    maxHeight: "max-content",
     flexGap: 0,
     flexDirection: "column",
     "&:nth-child(2n)": {
@@ -65,13 +73,11 @@ const Phone = styled.div`
     transform: "none",
   })}
 `;
-const PhoneImg = styled.img`
-  //width: 100%;
-`;
+const PhoneImg = styled.img``;
 const PhoneScreen = styled.div`
   width: 264px;
   height: 567px;
-  background-color: blue;
+  background-color: black;
   position: absolute;
   top: 17px;
   left: 18px;
@@ -93,7 +99,11 @@ const ProjectDetails = styled.div`
 const Description = styled.p`
   font-style: 7px;
   color: #cbc6c6;
-  line-height: 8vh;
+  padding: 15px;
+  line-height: 5vh;
+  ${mobile({
+    lineHeight: "5vh",
+  })}
 `;
 
 const Button = styled.button`
@@ -127,7 +137,7 @@ const Button = styled.button`
 `;
 const Laptop = styled.div`
   width: 600px;
-  height: 379px;
+  max-height: 379px;
   flex: 1;
   position: relative;
   transform: translateX(calc(550vh - ${(props) => props.position}px));
@@ -142,7 +152,7 @@ const LaptopScreen = styled.div`
   width: 451px;
   height: 283px;
   position: absolute;
-  background-color: blue;
+  background-color: black;
   top: 18px;
   left: 68px;
   overflow: scroll;
@@ -151,6 +161,13 @@ const LaptopScreen = styled.div`
     display: none;
   }
 `;
+
+const Image = styled.img`
+  margin-top: 5px;
+  width: 100%;
+`;
+
+const Link = styled.a``;
 
 export const Projects = ({ position }) => {
   return (
@@ -161,36 +178,61 @@ export const Projects = ({ position }) => {
       <Project>
         <Phone position={position}>
           <PhoneImg src={phone} />
-          <PhoneScreen></PhoneScreen>
+          <PhoneScreen>
+            <Image src={libraryImg} />
+          </PhoneScreen>
         </Phone>
         <ProjectDetails>
-          <Title>
-            FootyBaller
-            <SportsSoccerIcon />
-          </Title>
+          <Title>Library Management</Title>
           <Description>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi
-            voluptatum soluta aperiam aut sequi quasi? Provident eius suscipit
-            inventore culpa commodi optio consequatur nam facere, soluta
-            tenetur. Soluta, facilis deleniti.
+            The library management system provides a digital interface for users
+            to explore and interact with the library's collection of books. It
+            facilitates borrowing, and personalized user profiles, making the
+            library's resources easily accessible and manageable for both
+            students and teachers. <br></br>The technologies used in the library
+            management system are React, React Bootstrap, Redux, Axios, Node.js,
+            Express, MongoDB, Mongoose, bcrypt, JWT, JavaScript, HTML, CSS, and
+            JSON.
           </Description>
-          <Button>Visit</Button>
+
+          <Link
+            href="https://library-server-9l87.onrender.com/"
+            alt="Visit Page"
+          >
+            {" "}
+            <Button>Visit</Button>
+          </Link>
         </ProjectDetails>
       </Project>
       <Project>
         <Laptop position={position}>
           <LaptopImg src={laptop} />
-          <LaptopScreen></LaptopScreen>
+          <LaptopScreen>
+            <Image src={laptopImg} />
+          </LaptopScreen>
         </Laptop>
         <ProjectDetails>
-          <Title>Library Management </Title>
+          <Title>
+            {" "}
+            FootyBaller
+            <SportsSoccerIcon />
+          </Title>
           <Description>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi
-            voluptatum soluta aperiam aut sequi quasi? Provident eius suscipit
-            inventore culpa commodi optio consequatur nam facere, soluta
-            tenetur. Soluta, facilis deleniti.
+            Your go-to e-commerce website for football apparel. Shop jerseys,
+            shoes, and jackets with ease. Secure payments, top brands, and a
+            seamless experience. For football players and fans alike,
+            FootyBaller delivers quality and convenience. The FootyBaller
+            e-commerce app, built on the MERN (MongoDB, Express.js, React,
+            Node.js) stack, incorporates technologies like Styled Components for
+            styling, Redux Toolkit for state management, and integrates JWT and
+            Stripe API for authentication and payment processing, along with an
+            intuitive admin panel for seamless management of products, users,
+            and orders.
           </Description>
-          <Button>Visit</Button>
+          <Link href="https://github.com/kojubivek/e-coom-styled-client">
+            {" "}
+            <Button>Visit</Button>
+          </Link>
         </ProjectDetails>
       </Project>
     </Container>
