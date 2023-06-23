@@ -29,7 +29,7 @@ const App = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-  console.log(scroll);
+
   return (
     <Container>
       <Intro position={scroll} />

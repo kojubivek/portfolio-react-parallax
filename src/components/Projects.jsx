@@ -102,7 +102,7 @@ const Description = styled.p`
   padding: 15px;
   line-height: 5vh;
   ${mobile({
-    lineHeight: "5vh",
+    lineHeight: "6vh",
   })}
 `;
 
@@ -197,6 +197,7 @@ export const Projects = ({ position }) => {
 
           <Link
             href="https://library-server-9l87.onrender.com/"
+            target="_blank"
             alt="Visit Page"
           >
             {" "}
@@ -229,7 +230,10 @@ export const Projects = ({ position }) => {
             intuitive admin panel for seamless management of products, users,
             and orders.
           </Description>
-          <Link href="https://github.com/kojubivek/e-coom-styled-client">
+          <Link
+            href="https://github.com/kojubivek/e-coom-styled-client"
+            target="_blank"
+          >
             {" "}
             <Button>Visit</Button>
           </Link>

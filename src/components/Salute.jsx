@@ -39,7 +39,6 @@ const Img = styled.img`
 `;
 
 export const Salute = ({ position }) => {
-  console.log("position", position);
   return (
     <Container>
       <SaluteTxtContainer position={position}>

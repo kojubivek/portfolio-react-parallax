@@ -42,7 +42,7 @@ const Container = styled.div`
 `;
 
 const Title = styled.h1`
-  font-size: 100px;
+  font-size: 6vh;
   color: #f2d5d5;
   text-align: center;
 `;
@@ -116,6 +116,7 @@ export const Github = () => {
         placeholder="click to visit"
         info="click to visit"
         href="https://github.com/kojubivek"
+        target="_blank"
       >
         <GithubChart className="chart">
           <Dates>
@@ -139,7 +140,11 @@ export const Github = () => {
       </Link>
 
       <GithubSm>
-        <Link placeholder="click to visit" href="https://github.com/kojubivek">
+        <Link
+          placeholder="click to visit"
+          href="https://github.com/kojubivek"
+          target="_blank"
+        >
           <GithubImg src={githubImg} alt="click to visit" />
         </Link>
         <Title>Find Me On Github</Title>
