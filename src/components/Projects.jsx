@@ -230,10 +230,7 @@ export const Projects = ({ position }) => {
             intuitive admin panel for seamless management of products, users,
             and orders.
           </Description>
-          <Link
-            href="https://github.com/kojubivek/e-coom-styled-client"
-            target="_blank"
-          >
+          <Link href="https://footyballerv0-1.onrender.com/" target="_blank">
             {" "}
             <Button>Visit</Button>
           </Link>
